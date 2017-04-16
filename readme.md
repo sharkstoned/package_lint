@@ -3,7 +3,7 @@
 * Открываем терминал и выполняем следующую команду
 
 ```ShellSession
-apm install linter linter-htmlhint && apm install linter-stylelint && apm linter-ui-default
+apm install linter; apm install linter-htmlhint; apm install linter-stylelint; apm install linter-ui-default
 ```
 
 * Остальные файлы из репозитория кладём в корень проекта
