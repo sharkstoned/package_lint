@@ -1,9 +1,4 @@
-apm install linter
-apm install linter-htmlhint
-apm install linter-stylelint
-apm install linter-ui-default
-apm install busy-signal
-apm install intentions
+apm install --packages-file .atompackages
 echo { > .htmlhintrc
 echo. "tagname-lowercase": true, >> .htmlhintrc
 echo. "attr-lowercase": true, >> .htmlhintrc
