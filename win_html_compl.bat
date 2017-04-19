@@ -1,9 +1,5 @@
-echo OFF
-
 if "%PATH%"=="%PATH:atom\bin=%" set PATH=%PATH%;%USERPROFILE%\AppData\Local\atom\bin
-
-echo ON
-apm install --packages-file .atompackages
+apm install --packages-file .atompackages && (
 echo { > .htmlhintrc
 echo. "tagname-lowercase": true, >> .htmlhintrc
 echo. "attr-lowercase": true, >> .htmlhintrc
@@ -29,3 +25,4 @@ echo. "id-class-ad-disabled": false, >> .htmlhintrc
 echo. "href-abs-or-rel": false, >> .htmlhintrc
 echo. "attr-unsafe-chars": false >> .htmlhintrc
 echo. } >> .htmlhintrc
+)
