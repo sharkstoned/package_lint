@@ -1,6 +1,8 @@
+echo off
 if "%PATH%"=="%PATH:atom\bin=%" set PATH=%PATH%;%USERPROFILE%\AppData\Local\atom\bin
-(
-apm install linter && apm install linter-htmlhint && apm install linter-stylelint && apm install linter-ui-default && apm install busy-signal && apm install ntentions ) && (
+echo apm is ready
+echo wait for the packages to be installed ...
+(apm install linter && apm install linter-htmlhint && apm install linter-stylelint && apm install linter-ui-default && apm install busy-signal && apm install intentions) && (
 echo { > .htmlhintrc
 echo. "tagname-lowercase": true, >> .htmlhintrc
 echo. "attr-lowercase": true, >> .htmlhintrc
@@ -26,6 +28,7 @@ echo. "id-class-ad-disabled": false, >> .htmlhintrc
 echo. "href-abs-or-rel": false, >> .htmlhintrc
 echo. "attr-unsafe-chars": false >> .htmlhintrc
 echo. } >> .htmlhintrc
+echo .htmlhint created successfully
 ) & (
 echo "rules": { > .stylelintrc
 echo "at-rule-empty-line-before": [ "always", { >> .stylelintrc
@@ -76,7 +79,7 @@ echo "indentation": 2, >> .stylelintrc
 echo "keyframe-declaration-no-important": true, >> .stylelintrc
 echo "length-zero-no-unit": true, >> .stylelintrc
 echo "max-empty-lines": 2, >> .stylelintrc
-echo "max-nesting-depth": "2" >> .stylelintrc
+echo "max-nesting-depth": 2, >> .stylelintrc
 echo "media-feature-colon-space-after": "always", >> .stylelintrc
 echo "media-feature-colon-space-before": "never", >> .stylelintrc
 echo "media-feature-name-case": "lower", >> .stylelintrc
@@ -122,4 +125,5 @@ echo "value-list-comma-space-after": "always-single-line", >> .stylelintrc
 echo "value-list-comma-space-before": "never", >> .stylelintrc
 echo "value-list-max-empty-lines": 0, >> .stylelintrc
 echo } >> .stylelintrc
+echo .stylelintrc successfully
 )
