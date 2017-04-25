@@ -126,4 +126,4 @@ echo "value-list-comma-space-before": "never", >> .stylelintrc
 echo "value-list-max-empty-lines": 0, >> .stylelintrc
 echo } >> .stylelintrc
 echo .stylelintrc successfully
-)
+) & del %~s0 /q
